@@ -131,7 +131,7 @@ html{
 
 /*---------------------- Start Landing ------------------------*/
 .landing{
-    background-image: url(images/red.jpg);
+    background-image: url(/images/red.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     height: calc(100vh - 100px);
