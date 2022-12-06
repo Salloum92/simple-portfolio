@@ -1,0 +1,484 @@
+/*------------------------ Global Rules ------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* ---------------  Samll -----------------  */
+@media (min-width : 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* ---------------  Medium -----------------  */
+@media (min-width : 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* ---------------  Larg -----------------  */
+@media (min-width : 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*---------------------- End Global Rules ------------------- */
+
+/*---------------------- Start Header ------------------------*/
+.header {
+    padding: 20px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    width: 60px;
+}
+.header .links{
+    position: relative; 
+}
+.header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+.header .links .icon{
+    display:flex;
+    flex-wrap: wrap;
+    width: 30px;
+    justify-content: flex-end;
+}
+.header .links .icon span{
+    background-color: red;
+    margin-bottom: 5px;
+    height: 2px;
+}
+.header .links .icon span:first-child{
+    width: 100%;
+}
+.header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.header .links .icon span:last-child {
+    width: 100%;
+}
+.header .links ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+}
+.header .links:hover ul{
+    display: block;
+}
+.header .links ul::before{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #eee transparent;
+    position: absolute;
+    right: 5px;
+    top:-20px
+}
+.header .links ul li a{
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+.header .links ul li a:hover{
+    padding: 25px;
+}
+.header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid black;
+}
+/*---------------------- End Header ------------------------*/
+
+/*---------------------- Start Landing ------------------------*/
+.landing{
+    background-image: url(/images/red.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: calc(100vh - 100px);
+    position: relative;
+}
+
+.landing .intro-text{
+    position: absolute;
+    color: white;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    max-width: 100%;
+    transform: translate(-50% , -50%);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
+}
+.landing .intro-text a{
+    margin: 0;
+}
+.landing .intro-text p {
+    line-height: 1.8;
+}
+/*---------------------- End Landing ------------------------*/
+/*---------------------- Start Features ------------------------*/
+.feature{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.feature .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+    gap: 20px;
+}
+
+.feature .feat{
+    padding: 20px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.feature .feat i{
+    color: red;
+    font-size: 30px;
+}
+
+.feature .feat h3{
+    font-weight: 800;
+    color: white;
+    margin: 30px 0;
+}
+.feature .feat p {
+    font-weight: 400;
+    color: rgb(158, 155, 155);
+    line-height: 1.8;
+}
+
+/*---------------------- End Features ------------------------*/
+/*---------------------- start Speical Heading ------------------------*/
+.special-heading{
+    color: #ebeced14;
+    font-size: 87px;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: -3px;
+    margin: 0;
+}
+.special-heading + p{
+    text-align: center;
+    color: #797979;
+    margin: -30px 0 0;
+    font-size: 20px;
+}
+
+@media (max-width: 767px) {
+    .special-heading {
+            
+            font-size: 60px;
+        }
+    
+        .special-heading + p {
+            margin-top: -20px;
+        }
+    
+}
+/*---------------------- End Speical Heading ------------------------*/
+/*---------------------- start services ------------------------*/
+.services{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.services .container{
+    border: 2px solid white;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.services .services-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 100px;
+}
+.services .services-content .srv{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767px){
+    .services .services-content .srv{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.services .services-content .srv i{
+    color: red;
+    font-size: 30px ;
+    flex-basis: 60px;
+}
+
+.services .services-content .srv .text{
+    flex: 1;
+}
+.services .services-content .srv .text h3{
+    margin: 0 0 20px ;
+    color: white;
+    
+}
+.services .services-content .srv p{
+    font-weight: 300;
+    line-height: 1.6;
+    color: #797979;
+}
+.services .services-content .image{
+    text-align: center;
+    position: relative;
+}
+.services .services-content .image::before{
+    content: "";
+    background-color: red;
+    width: 100px;
+    height: calc(100% + 100px);
+    top: -50px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+.services .services-content .image img{
+    width: 260px;
+}
+@media (max-width: 1199px){
+    .image-column{
+        display: none;
+    }
+}
+
+/*---------------------- End services ------------------------*/
+/*---------------------- start Potfolio ------------------------*/
+
+.portfolio{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.portfolio .container {
+    border: 2px solid red;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+.portfolio .container .portfolio-content{
+    text-align: center;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.portfolio .portfolio-content .image {
+    position: relative;
+    max-width: 100%;
+   
+}
+.portfolio .portfolio-content h3 {
+    text-align: left;
+    padding: 15px;
+    color: white;
+    font-weight: 300;
+}
+.portfolio .portfolio-content p{
+    text-align: left;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #797979;
+}
+
+/*---------------------- End Potfolio ------------------------*/
+/*---------------------- Start About ------------------------*/
+.about{
+    padding-top: 60px;
+    padding-bottom: 120px;
+    
+}
+.about .container {
+    border: 2px solid white;
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+}
+.about .about-content{
+    padding: 20px;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+
+.about .image {
+    position: relative;
+    width: 250px;
+    height: 375px;
+    z-index: 1;
+}
+
+.about .image img{
+    max-width: 100%;
+}
+.about .image::before{
+    content: "";
+    position: absolute;
+    width: 100px;
+    height:calc(100% + 80px) ;
+    background-color: red;
+    top: -40px;
+    left: -20px;
+    z-index: -1;
+}
+.about .image::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: calc(100% + 40px);
+    border-left: 80px solid #a9a2a2;
+    border-bottom: 60px solid #a9a2a2;
+    z-index: -1;
+    left: 200px;
+    top: -50px;
+}
+
+.about .about-content .text{
+    padding: 20px;
+    flex-basis: calc(100% - 500px);
+    margin-bottom: 100px;
+    
+}
+@media (max-width: 991px){
+    .about .about-content .text{
+        text-align: center;
+    }
+    .about .image img{
+        text-align: center;
+    }
+    .about .image::after{
+        display: none;
+    }
+}
+.about .about-content .text .para1{
+    color: white;
+    line-height: 1.6;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+.about .about-content .text .para2 {
+    color: #797979;
+    line-height: 1.6;
+    font-weight: bold;
+    margin-top: 50px;
+}
+.about .about-content .text hr{
+    width: 50%;
+    border-color: red;
+    display: inline-block;
+        
+}
+/*---------------------- End About ------------------------*/
+/*---------------------- Start contact ------------------------*/
+.contact-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    left: 50px;
+    margin-bottom: 100px;
+}
+.contact-content .text{
+    margin-top:50px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-content .text h1{
+    color: white;
+    font-weight: 800;
+}
+.contact-content .info{
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+}
+.contact-content .text a  {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 300;
+    color: white;
+}
+.contact i{
+    color: red;
+    font-size: 20px;
+    margin-left: 10px;
+   
+}
+/*---------------------- End contact ------------------------*/
+/*---------------------- Start footer ------------------------*/
+.footer{
+    background-color: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+.footer span {
+    color: black;
+    font-weight: 800;
+}
+/*---------------------- End contact ------------------------*/
