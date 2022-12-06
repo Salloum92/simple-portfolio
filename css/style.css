@@ -404,8 +404,13 @@ html{
     
 }
 @media (max-width: 991px){
+    .about .about-content{
+        flex-direction: column;
+        text-align: center;
+    }
     .about .about-content .text{
         text-align: center;
+        margin-top: 20px;
     }
     .about .image img{
         text-align: center;
@@ -413,6 +418,9 @@ html{
     .about .image::after{
         display: none;
     }
+}
+@media (max-width: 767px){
+    ;
 }
 .about .about-content .text .para1{
     color: white;
